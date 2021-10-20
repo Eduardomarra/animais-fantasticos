@@ -18,7 +18,7 @@ export default function initAnimaNumeros() {
   }
 
   const observerTarget = document.querySelector(".numeros");
- 
+
   let observer;
   function handleMutation(mutation) {
     if (mutation[0].target.classList.contains("ativo")) {
