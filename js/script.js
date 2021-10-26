@@ -3,7 +3,7 @@ import TabNav from "./modules/init-tab.js";
 import Accordion from "./modules/init-accordion.js";
 import ScrollSuave from "./modules/scroll-suave.js";
 import Modal from "./modules/modal.js";
-import initTooltip from "./modules/tooltip.js";
+import Tooltip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFetchAnimais from "./modules/fetch-animais.js";
@@ -27,9 +27,10 @@ const modal = new Modal(
 );
 modal.init();
 
-initAminateScroll();
+const tooltip = new Tooltip("[data-tooltip]");
+tooltip.init();
 
-initTooltip();
+initAminateScroll();
 initDropdownMenu();
 initMenuMobile();
 initFetchAnimais();
