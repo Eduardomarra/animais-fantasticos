@@ -1,9 +1,11 @@
+import debounce from './debounce.js';
+
 export default class ScrollAnima {
   constructor(sections) {
     this.sections = document.querySelectorAll(sections);
     this.halfWindow = innerHeight * 0.6;
 
-    this.animateScroll = this.animateScroll.bind(this);
+    this.animateScroll = debounce(this.animateScroll.bind(this), 200);
   }
 
   animateScroll() {
