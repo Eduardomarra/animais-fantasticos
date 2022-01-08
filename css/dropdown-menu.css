@@ -3,11 +3,12 @@
 }
 [data-dropdown] .dropdown-menu{
     display: none;
-    animation: show-up 0.5s forwards;
+   
 }
 [data-dropdown]:hover .dropdown-menu, 
 [data-dropdown].active .dropdown-menu{
     display: block;
+    animation: show-up 0.5s forwards;
 }
 @keyframes show-up{
     from{
@@ -40,4 +41,14 @@
 }
 .dropdown-menu li a:hover{
     color: white;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 700px){
+    [data-dropdown] .dropdown-menu, 
+    [data-dropdown].active .dropdown-menu{
+        display: block;
+        animation: show-up 0.5s forwards;
+    }
 }
